@@ -1,0 +1,15 @@
+{
+  "name": "dealden",
+  "version": "1.0.0",
+  "description": "An online marketplace application built with MERN stack",
+  "author": "Palak",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "express",
+    "mongodb",
+    "node",
+    "mern",
+    "marketplace"
+  ]
+}
