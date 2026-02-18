@@ -10,6 +10,7 @@ import userRoutes from './routes/user.routes'
 import authRoutes from './routes/auth.routes'
 import shopRoutes from './routes/shop.routes'
 import productRoutes from './routes/product.routes'
+import orderRoutes from './routes/order.routes'
 
 const CURRENT_WORKING_DIR = process.cwd()
 
@@ -32,6 +33,7 @@ app.use('/', userRoutes)
 app.use('/', authRoutes)
 app.use('/', shopRoutes)
 app.use('/', productRoutes)
+app.use('/', orderRoutes)
 
 // Catch unauthorised errors
 app.use((err, req, res, next) => {
