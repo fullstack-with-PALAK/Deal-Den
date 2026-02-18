@@ -6,6 +6,8 @@ import compress from 'compression'
 import cors from 'cors'
 import helmet from 'helmet'
 import Template from './../template'
+import userRoutes from './routes/user.routes'
+import authRoutes from './routes/auth.routes'
 
 const CURRENT_WORKING_DIR = process.cwd()
 
@@ -22,6 +24,10 @@ app.use(helmet())
 app.use(cors())
 
 app.use('/dist', express.static(path.join(CURRENT_WORKING_DIR, 'dist')))
+
+// Mount routes
+app.use('/', userRoutes)
+app.use('/', authRoutes)
 
 // Catch unauthorised errors
 app.use((err, req, res, next) => {
