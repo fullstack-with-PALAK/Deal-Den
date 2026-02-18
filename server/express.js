@@ -8,6 +8,7 @@ import helmet from 'helmet'
 import Template from './../template'
 import userRoutes from './routes/user.routes'
 import authRoutes from './routes/auth.routes'
+import shopRoutes from './routes/shop.routes'
 
 const CURRENT_WORKING_DIR = process.cwd()
 
@@ -28,6 +29,7 @@ app.use('/dist', express.static(path.join(CURRENT_WORKING_DIR, 'dist')))
 // Mount routes
 app.use('/', userRoutes)
 app.use('/', authRoutes)
+app.use('/', shopRoutes)
 
 // Catch unauthorised errors
 app.use((err, req, res, next) => {
